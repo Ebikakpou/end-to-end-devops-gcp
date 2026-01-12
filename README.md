@@ -47,3 +47,35 @@ A Docker health check is configured to periodically call the `/health` endpoint.
 - Seamless CI/CD integration
 - Foundation for Kubernetes
 
+## Cloud Infrastructure on GCP
+
+### Why Google Cloud Platform (GCP)?
+GCP provides reliable, scalable cloud infrastructure and integrates well with containerized workloads. It is widely used in modern DevOps environments.
+
+### GCP Project Structure
+All resources are created within a dedicated GCP project. This provides isolation, billing control, and centralized IAM management.
+
+### Compute Engine
+We use a Google Compute Engine virtual machine running Ubuntu Linux to host the containerized application.
+
+### VM Responsibilities
+- Run Docker containers
+- Host Nginx reverse proxy
+- Serve as deployment target for CI/CD pipelines
+
+## Cloud Infrastructure on GCP
+
+### Why Google Cloud Platform (GCP)?
+GCP provides reliable, scalable cloud infrastructure and integrates well with containerized workloads. It is widely used in modern DevOps environments.
+
+### GCP Project Structure
+All resources are created within a dedicated GCP project. This provides isolation, billing control, and centralized IAM management.
+
+### Compute Engine
+We use a Google Compute Engine virtual machine running Ubuntu Linux to host the containerized application.
+
+### VM Responsibilities
+- Run Docker containers
+- Host Nginx reverse proxy
+- Serve as deployment target for CI/CD pipelines
+

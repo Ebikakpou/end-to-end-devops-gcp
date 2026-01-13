@@ -113,3 +113,19 @@ On every push to the `main` branch:
 
 ### Security
 Secrets such as SSH keys and registry credentials are securely stored using GitHub Secrets.
+
+## Reverse Proxy with Nginx
+
+### Why a Reverse Proxy?
+In production environments, applications are not exposed directly to users. A reverse proxy sits in front of backend services and handles incoming traffic.
+
+### Nginx Responsibilities
+- Listens on port 80
+- Forwards requests to the Node.js application
+- Acts as a single entry point to the system
+
+### Benefits
+- Improved security
+- Better traffic control
+- Easier scaling
+- Foundation for HTTPS and load balancing

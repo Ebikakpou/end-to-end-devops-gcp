@@ -38,7 +38,5 @@ jobs:
           key: ${{ secrets.VM_SSH_KEY }}
           script: |
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/devops-node-app:latest
-            docker stop devops-node-container || true
-            docker rm devops-node-container || true
-            docker run -d -p 80:3000 --name devops-node-container ${{ secrets.DOCKERHUB_USERNAME }}/devops-node-app:latest
-
+            docker compose down || true
+            docker compose up -d

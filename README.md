@@ -98,3 +98,18 @@ Terraform allows us to define cloud infrastructure using code. This makes infras
 - No manual cloud configuration
 - Consistent environments
 - Easy teardown and recreation
+
+## CI/CD with GitHub Actions
+
+### Why CI/CD?
+CI/CD ensures that every code change is automatically built, tested, and deployed. This reduces manual errors and accelerates delivery.
+
+### Pipeline Overview
+On every push to the `main` branch:
+1. Code is checked out
+2. Docker image is built
+3. Image is pushed to Docker Hub
+4. Application is deployed to GCP VM via SSH
+
+### Security
+Secrets such as SSH keys and registry credentials are securely stored using GitHub Secrets.

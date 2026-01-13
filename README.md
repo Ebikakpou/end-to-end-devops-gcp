@@ -79,3 +79,22 @@ We use a Google Compute Engine virtual machine running Ubuntu Linux to host the 
 - Host Nginx reverse proxy
 - Serve as deployment target for CI/CD pipelines
 
+## Infrastructure as Code with Terraform
+
+### Why Terraform?
+Terraform allows us to define cloud infrastructure using code. This makes infrastructure reproducible, version-controlled, and reviewable.
+
+### Managed Resources
+- Google Compute Engine VM
+- Firewall rules for HTTP traffic
+
+### Terraform Workflow
+1. `terraform init` – initialize provider
+2. `terraform plan` – preview infrastructure changes
+3. `terraform apply` – provision infrastructure
+4. `terraform destroy` – remove infrastructure safely
+
+### Benefits
+- No manual cloud configuration
+- Consistent environments
+- Easy teardown and recreation
